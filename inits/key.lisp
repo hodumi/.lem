@@ -3,13 +3,17 @@
         #:lem))
 (in-package #:lem-my-init/key)
 
-; prev/next page
+;;; prev/next page
 (define-key lem:*global-keymap* "M-p" 'lem:previous-page)
 (define-key lem:*global-keymap* "M-n" 'lem:next-page)
 
+;;; undo/redo
+(define-key lem:*global-keymap* "C-_" 'lem:undo)
 
+;;; delete
 (define-key lem:*global-keymap* "M-h" 'lem:backward-delete-word)
 
+;;; @ prefix
 ;(define-key lem:*global-keymap* "@ @" )
 (define-key lem:*global-keymap* "@ k" 'lem:kill-buffer)
 (define-key lem:*global-keymap* "@ b" 'lem:select-buffer)
